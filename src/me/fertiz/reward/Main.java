@@ -8,6 +8,6 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         getCommand("losuj").setExecutor(new DrawCommand(this));
-        System.out.println("In my room i beat my clock");
+        //System.out.println("In my room i beat my clock"); <- O CO CHODZI KÓRWA?!?!?!?
     }
 }
