@@ -57,12 +57,9 @@ public class DrawCommand implements CommandExecutor {
     }
 
     private void onDrop(Collection<Player> winners) {
-        for (Player all : Bukkit.getOnlinePlayers()) {
-            ChatUtil.sendTitle(all, "&8>> &7KONKURS SIE ZAKONCZYl! &8<<");
-            Bukkit.getScheduler().runTaskLater(plugin, () -> ChatUtil.sendTitle(all, "&8>> &7Wygranymi sa&8: &8<<"), 20);
-            for (Player winner : winners) {
-                Bukkit.getScheduler().runTaskLater(plugin, () -> ChatUtil.sendTitle(all, "&8>> &e&l"+winner.getName()+" &8<<"), 60);
-            }
+        for (Player winner : winners) {
+            Bukkit.broadcastMessage("Wygrany: " + winner.getName());
         }
+       
     }
 }
