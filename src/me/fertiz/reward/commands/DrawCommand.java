@@ -47,7 +47,7 @@ public class DrawCommand implements CommandExecutor {
         return false;
     }
 
-    private Collection<Player> pickRandom(List<Player> list, int n, int winnerAmount) {
+    private static Collection<Player> pickRandom(List<Player> list, int n, int winnerAmount) {
         Random random = ThreadLocalRandom.current();
         Collection<Player> winners = random.ints(n, 0, list.size()).mapToObj(list::get).collect(Collectors.toSet());
         while (winners.size() != winnerAmount) {
