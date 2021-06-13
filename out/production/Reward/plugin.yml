@@ -1,0 +1,6 @@
+main: me.fertiz.reward.Main
+version: 1.0
+name: Reward
+author: nikt
+commands:
+  losuj:
